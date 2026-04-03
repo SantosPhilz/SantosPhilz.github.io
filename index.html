@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip Ajayi | Data Science & Analysis Portfolio</title>
+  <meta name="description" content="Portfolio of Philip Ajayi - Animal Science and Livestock Systems Specialist working across data science, analytics, breeding genetics, and FAO technical reporting." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#121b2d;
+      --soft:#1b2640;
+      --text:#eaf0ff;
+      --muted:#b6c2e2;
+      --accent:#7fb2ff;
+      --line:#293653;
+      --card:#10192a;
+      --good:#dff3e7;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#08101d 0%, #0e1628 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px,92%); margin:auto}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(8,16,29,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    nav{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 0;
+    }
+    .brand{font-weight:700; letter-spacing:.3px}
+    .nav-links{display:flex; gap:18px; flex-wrap:wrap}
+    .hero{
+      padding:64px 0 40px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+    }
+    .hero-card,.section-card,.project,.contact-card{
+      background:rgba(18,27,45,.85);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 12px 32px rgba(0,0,0,.18);
+    }
+    .hero-card{padding:34px}
+    .hero h1{
+      font-size:clamp(2rem,4vw,3.4rem);
+      line-height:1.15;
+      margin:0 0 14px;
+    }
+    .hero p{
+      color:var(--muted);
+      font-size:1.02rem;
+      margin:0 0 16px;
+    }
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:20px 0}
+    .pill{
+      border:1px solid var(--line);
+      background:var(--soft);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.92rem;
+      color:var(--good);
+    }
+    .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:22px}
+    .btn{
+      display:inline-block; padding:12px 16px; border-radius:12px;
+      border:1px solid var(--line); background:var(--soft); color:var(--text);
+      font-weight:700;
+    }
+    .btn.primary{background:var(--accent); color:#08101d; border-color:transparent}
+    .side-panel{padding:24px}
+    .mini-title{
+      color:var(--muted);
+      font-size:.85rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .stat{padding:12px 0; border-bottom:1px solid var(--line)}
+    .stat:last-child{border-bottom:none}
+    section{padding:18px 0 12px}
+    h2{
+      font-size:1.8rem; margin:0 0 16px;
+    }
+    .section-card{padding:28px}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .skills-list,.edu-list{
+      display:grid; gap:12px;
+    }
+    .item{
+      background:var(--card);
+      border:1px solid var(--line);
+      padding:16px;
+      border-radius:14px;
+    }
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+    .project{padding:20px}
+    .project h3{margin:0 0 10px; font-size:1.1rem}
+    .project p{margin:0 0 14px; color:var(--muted)}
+    .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px}
+    .tag{
+      font-size:.85rem; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line); background:var(--soft); color:var(--muted)
+    }
+    .list{margin:0; padding-left:18px; color:var(--muted)}
+    .contact-card{padding:28px}
+    footer{
+      padding:34px 0 54px; color:var(--muted); text-align:center
+    }
+    .small{font-size:.93rem; color:var(--muted)}
+    @media (max-width: 860px){
+      .hero,.grid-2{grid-template-columns:1fr}
+      .nav-links{gap:12px; font-size:.95rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Philip Ajayi</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="mini-title">Data Science • Analytics • Animal Genetics</div>
+        <h1>Data and analysis portfolio built around real-world technical work</h1>
+        <p>
+          I work at the point where data, livestock systems, genetics, public-sector reporting,
+          and decision support meet. My work covers data cleaning, analysis, visualization,
+          reporting, and evidence generation using R, Python, Excel, SQL, Tableau, Power BI, and GIS tools.
+        </p>
+        <p>
+          I currently support technical work related to animal genetic resources, country reporting,
+          and global data analysis, with experience in breeding and genetics, livestock systems,
+          monitoring, and research translation.
+        </p>
+        <div class="pill-row">
+          <span class="pill">R</span>
+          <span class="pill">Python</span>
+          <span class="pill">Excel</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">QGIS</span>
+          <span class="pill">Data Cleaning</span>
+          <span class="pill">Visualization</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:philip.boluwatife.ajayi@gmail.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-card side-panel">
+        <div class="mini-title">Snapshot</div>
+        <div class="stat"><strong>Current focus:</strong><br/>Data analysis, technical reporting, animal genetic resources, and evidence-based decision support.</div>
+        <div class="stat"><strong>Domains:</strong><br/>Animal breeding and genetics, livestock systems, research, public-sector analytics, and education support.</div>
+        <div class="stat"><strong>Strength:</strong><br/>Turning raw and messy data into clear findings, charts, maps, tables, and usable insight.</div>
+        <div class="stat"><strong>Best fit roles:</strong><br/>Data Analyst, Research Analyst, Junior Data Scientist, Monitoring and Evaluation Analyst, BI Analyst.</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-card">
+        <h2>About</h2>
+        <p class="small">
+          I am an Animal Science and Livestock Systems Specialist with strong interest in data science,
+          analytics, and decision support. My background combines breeding and genetics, data-driven
+          research, technical reporting, and public-interest work. I enjoy building clear analysis
+          workflows, creating good visual outputs, and communicating findings in a way decision-makers can use.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="grid-2">
+        <div class="section-card">
+          <h2>Technical skills</h2>
+          <div class="skills-list">
+            <div class="item"><strong>Programming:</strong> R, Python, SQL</div>
+            <div class="item"><strong>Analysis tools:</strong> Excel, SPSS, Tableau, Power BI</div>
+            <div class="item"><strong>Spatial tools:</strong> QGIS, GIS mapping, geospatial analysis</div>
+            <div class="item"><strong>Core methods:</strong> data cleaning, exploratory analysis, visualization, reporting, QA review, harmonization</div>
+            <div class="item"><strong>Communication:</strong> technical writing, research reporting, presentation design, stakeholder-ready summaries</div>
+          </div>
+        </div>
+        <div class="section-card">
+          <h2>What I can do</h2>
+          <ul class="list">
+            <li>Clean, structure, and validate messy datasets</li>
+            <li>Compare trends across time, countries, or regions</li>
+            <li>Build dashboards, tables, and charts for reporting</li>
+            <li>Write clear interpretation from analysis outputs</li>
+            <li>Support research, policy, and programme decision-making</li>
+            <li>Work across technical, scientific, and operational datasets</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-card">
+        <h2>Selected portfolio projects</h2>
+        <div class="projects-grid">
+          <article class="project">
+            <h3>Global questionnaire analysis for animal genetic resources</h3>
+            <p>
+              Built structured outputs from country questionnaire data, including cleaning, coding,
+              cross-year comparison, and regional summaries for reporting.
+            </p>
+            <div class="tag-row">
+              <span class="tag">R</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Data Cleaning</span>
+              <span class="tag">Comparative Analysis</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+
+          <article class="project">
+            <h3>Breed-name harmonization and validation workflow</h3>
+            <p>
+              Structured breed-name records and supported validation logic to improve consistency across
+              datasets and reporting systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">R</span>
+              <span class="tag">Validation</span>
+              <span class="tag">Data Quality</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+
+          <article class="project">
+            <h3>Regional policy and capacity visualizations</h3>
+            <p>
+              Produced charts, tables, and synthesis-ready visuals to compare country and regional
+              responses across years for policy and capacity indicators.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Excel</span>
+              <span class="tag">Tableau / Power BI</span>
+              <span class="tag">Storytelling</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+
+          <article class="project">
+            <h3>Geospatial mapping for livestock-related reporting</h3>
+            <p>
+              Used map-based outputs to support technical reporting and interpretation across regions,
+              helping turn data into clearer visual evidence.
+            </p>
+            <div class="tag-row">
+              <span class="tag">QGIS</span>
+              <span class="tag">GIS</span>
+              <span class="tag">Maps</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+
+          <article class="project">
+            <h3>Research data analysis in breeding and genetics</h3>
+            <p>
+              Worked with biological and production datasets to support research in animal breeding,
+              genetics, and sustainable livestock systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">R</span>
+              <span class="tag">Statistics</span>
+              <span class="tag">Research</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+
+          <article class="project">
+            <h3>Dashboard-ready public sector reporting outputs</h3>
+            <p>
+              Prepared analysis tables, visuals, and summaries that can feed internal dashboards,
+              reports, and management-ready presentations.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Power BI</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Reporting</span>
+            </div>
+            <p class="small">Add your repository link here once uploaded.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="grid-2">
+        <div class="section-card">
+          <h2>Education</h2>
+          <div class="edu-list">
+            <div class="item"><strong>MSc Data-Driven Breeding and Genetics</strong><br/>University of Edinburgh (ongoing)</div>
+            <div class="item"><strong>MSc Animal Production: Breeding and Genetics</strong><br/>University of Rwanda</div>
+            <div class="item"><strong>B.Agric. (Hons) Animal Science</strong><br/>Landmark University</div>
+          </div>
+        </div>
+        <div class="section-card">
+          <h2>Certifications</h2>
+          <div class="edu-list">
+            <div class="item">IBM Data Science Professional Certificate</div>
+            <div class="item">IBM Generative AI Engineering</div>
+            <div class="item">Google Project Management Certificate</div>
+            <div class="item">Data Analytics training</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-card">
+        <h2>Contact</h2>
+        <p class="small">
+          Email: <a href="mailto:philip.boluwatife.ajayi@gmail.com">philip.boluwatife.ajayi@gmail.com</a><br/>
+          LinkedIn: add your profile link<br/>
+          GitHub: add your profile link
+        </p>
+        <p class="small">
+          This page is ready for GitHub Pages. Replace placeholder links with your real GitHub,
+          LinkedIn, and project repository links after upload.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Built for GitHub Pages • Update links, project screenshots, and repository URLs to make it fully yours
+    </div>
+  </footer>
+</body>
+</html>
