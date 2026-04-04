@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philip Ajayi | Data Science, Research & Animal Systems Portfolio</title>
+  <meta name="description" content="Professional portfolio of Philip Ajayi spanning data science, analytics, research support, technical reporting, and animal systems." />
+  <style>
+    :root{
+      --bg:#091120;
+      --bg2:#0d1930;
+      --panel:#0f1b34;
+      --soft:#1a2a4d;
+      --line:#2c406d;
+      --text:#f2f6ff;
+      --muted:#c2cde5;
+      --accent:#9fc6ff;
+      --accent2:#d4e4ff;
+      --chip:#162644;
+      --shadow:0 18px 48px rgba(0,0,0,.24);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1180px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(9,17,32,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    nav{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;
+    }
+    .brand{font-size:1.08rem;font-weight:700}
+    .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+    .nav-links a{font-size:.94rem}
+    .hero{
+      display:grid;grid-template-columns:1.18fr .82fr;gap:22px;
+      padding:54px 0 28px;align-items:stretch;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(18,32,61,.93), rgba(13,25,47,.93));
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
+    .hero-main{padding:36px}
+    .hero-side{padding:28px}
+    .eyebrow{
+      font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent2);margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 16px;
+      font-size:clamp(2.1rem,4vw,4rem);
+      line-height:1.08;
+    }
+    .lead{
+      color:var(--muted);
+      font-size:1.04rem;
+      margin:0 0 14px;
+    }
+    .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+    .chip{
+      background:var(--chip);
+      border:1px solid var(--line);
+      padding:8px 12px;border-radius:999px;font-size:.9rem;color:var(--accent2);
+    }
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .btn{
+      display:inline-block;padding:12px 16px;border-radius:12px;
+      border:1px solid var(--line);background:var(--soft);color:var(--text);font-weight:700;
+    }
+    .btn.primary{background:var(--accent);color:#08101d;border-color:transparent}
+    .stat{padding:14px 0;border-bottom:1px solid var(--line);}
+    .stat:last-child{border-bottom:none}
+    section{padding:16px 0}
+    .section-card{padding:28px}
+    .section-title{font-size:1.9rem;margin:0 0 14px}
+    .small{color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .mini-card{
+      background:rgba(10,18,34,.78);border:1px solid var(--line);
+      border-radius:18px;padding:18px;
+    }
+    .mini-card h3,.project h3,.role h3{margin:0 0 10px;font-size:1.1rem}
+    .mini-card p,.project p,.role p{color:var(--muted)}
+    .projects-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;
+    }
+    .project{
+      padding:20px;border-radius:18px;border:1px solid var(--line);
+      background:rgba(10,18,34,.88);
+    }
+    .project-type{
+      display:inline-block;margin-bottom:10px;font-size:.78rem;
+      letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);
+    }
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+    .tag{
+      padding:6px 10px;border-radius:999px;border:1px solid var(--line);
+      background:var(--chip);color:var(--muted);font-size:.84rem;
+    }
+    .timeline{display:grid;gap:16px}
+    .role{
+      padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(10,18,34,.8);
+    }
+    .role-meta{color:var(--accent2);font-size:.92rem;margin-bottom:8px}
+    .two-col-list{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;
+    }
+    .skill-box{
+      border:1px solid var(--line);background:rgba(10,18,34,.74);
+      border-radius:16px;padding:16px;
+    }
+    .bullets{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .footer{padding:40px 0 58px;text-align:center;color:var(--muted)}
+    .divider{height:1px;background:var(--line);margin:10px 0 18px}
+    @media (max-width: 950px){
+      .hero,.grid-2,.grid-3,.two-col-list{grid-template-columns:1fr}
+      nav{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Philip Ajayi</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#domains">Domains</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card hero-main">
+        <div class="eyebrow">Data Science • Analytics • Research • Technical Reporting • Animal Systems</div>
+        <h1>Broad professional portfolio built for data, research, and sector-facing work</h1>
+        <p class="lead">
+          I am Philip Ajayi, a data and research professional working across general data analysis, research support,
+          technical reporting, evidence generation, and domain-focused work in animal science, livestock systems, and genetics.
+        </p>
+        <p class="lead">
+          My profile combines analytical delivery, research support, public-interest reporting, training, and domain expertise.
+          I work across general analyst functions and technical sector work, with experience in international reporting,
+          data validation, GIS outputs, research mentoring, and livestock systems analysis.
+        </p>
+        <div class="chip-row">
+          <span class="chip">R</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Excel</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">SPSS</span>
+          <span class="chip">QGIS</span>
+          <span class="chip">Research Design</span>
+          <span class="chip">Data Storytelling</span>
+          <span class="chip">Technical Writing</span>
+          <span class="chip">Animal Genetics</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="#portfolio">View Portfolio</a>
+          <a class="btn" href="https://github.com/SantosPhilz" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/philip-b-d-ajayi" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:ajayiphilip70@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="card hero-side">
+        <div class="stat"><strong>Current positioning</strong><br/>Data analyst, research analyst, technical reporting specialist, and domain expert in animal and livestock systems.</div>
+        <div class="stat"><strong>Best-fit roles</strong><br/>Data Analyst, Research Analyst, BI Analyst, M&amp;E Analyst, Technical Analyst, Livestock Data Specialist, Knowledge and Reporting Associate.</div>
+        <div class="stat"><strong>Core advantage</strong><br/>Turning messy information into structured outputs, clear visuals, technical summaries, and decision-ready insight.</div>
+        <div class="stat"><strong>Professional range</strong><br/>Broad enough for general analyst and research roles, while still strong in agriculture, livestock, genetics, and research-heavy work.</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="card section-card">
+        <h2 class="section-title">About me</h2>
+        <p class="small">
+          I am an Animal Science and Livestock Systems Specialist with over seven years of experience across animal breeding and genetics,
+          livestock data analysis, genetic diversity studies, animal health and welfare support, sustainable animal production, and applied research.
+          Alongside this, I have built a broader profile in data analysis, technical reporting, research support, training, and evidence generation.
+        </p>
+        <p class="small">
+          I currently contribute to international livestock and animal genetic resources reporting in Rome, while also bringing experience from research,
+          field and laboratory-linked work, academic support, mentorship, and programme-facing analysis across Nigeria and Rwanda.
+        </p>
+      </div>
+    </section>
+
+    <section id="domains">
+      <div class="grid-3">
+        <div class="card section-card">
+          <h2 class="section-title">General data & analytics</h2>
+          <div class="mini-card">
+            <h3>Focus</h3>
+            <p>Data cleaning, exploratory analysis, reporting, dashboard thinking, visualization, interpretation, and structured communication of findings.</p>
+          </div>
+          <div class="mini-card" style="margin-top:14px">
+            <h3>Use cases</h3>
+            <p>Business analysis, public-sector reporting, programme dashboards, operational analysis, monitoring outputs, and performance summaries.</p>
+          </div>
+        </div>
+
+        <div class="card section-card">
+          <h2 class="section-title">Research & evidence work</h2>
+          <div class="mini-card">
+            <h3>Focus</h3>
+            <p>Research design support, methodology guidance, survey interpretation, technical summaries, literature-informed work, publication support, and written outputs.</p>
+          </div>
+          <div class="mini-card" style="margin-top:14px">
+            <h3>Use cases</h3>
+            <p>Academic projects, donor reporting, knowledge products, thesis and dissertation support, publication preparation, and policy-facing analysis.</p>
+          </div>
+        </div>
+
+        <div class="card section-card">
+          <h2 class="section-title">Animal & livestock systems</h2>
+          <div class="mini-card">
+            <h3>Focus</h3>
+            <p>Animal genetics, breeding, livestock systems analysis, animal health and welfare support, population data work, and technical sector reporting.</p>
+          </div>
+          <div class="mini-card" style="margin-top:14px">
+            <h3>Use cases</h3>
+            <p>Food systems, livestock development, technical institutions, agrifood reporting, genetics work, and global livestock information systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="card section-card">
+        <h2 class="section-title">Portfolio projects and case studies</h2>
+        <p class="small">This section now uses actual experience areas and portfolio-ready case studies rather than empty prompts.</p>
+        <div class="projects-grid">
+          <article class="project">
+            <span class="project-type">International reporting</span>
+            <h3>Global questionnaire analysis and reporting workflow</h3>
+            <p>
+              Reviewed and analyzed questionnaire responses submitted by countries, regional focal points, and international organizations
+              to support the Third Report on the State of the World’s Animal Genetic Resources. The work involved cleaning response categories,
+              comparing patterns across regions and time, preparing technical summaries, and helping turn raw country submissions into usable reporting outputs.
+            </p>
+            <div class="tag-row">
+              <span class="tag">R</span><span class="tag">Excel</span><span class="tag">Comparative Analysis</span><span class="tag">Reporting</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Data quality and systems</span>
+            <h3>Breed data harmonization and validation support</h3>
+            <p>
+              Supported the compilation, validation, integration, and management of breed and livestock-related data from reporting systems,
+              including work linked to DAD-IS and other livestock information sources. This involved checking consistency, improving data quality,
+              supporting evidence-based reporting, and making records more useful for analysis and policy-facing outputs.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">R</span><span class="tag">Data Quality</span><span class="tag">Validation</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Spatial analysis</span>
+            <h3>Maps and spatial outputs for technical reporting</h3>
+            <p>
+              Produced maps and spatial visualizations using QGIS to support analysis and presentation of livestock systems information.
+              These outputs helped make technical findings easier to interpret and communicate, especially in reporting contexts where regional and country-level patterns mattered.
+            </p>
+            <div class="tag-row">
+              <span class="tag">QGIS</span><span class="tag">GIS</span><span class="tag">Spatial Analysis</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Research and training</span>
+            <h3>Research mentoring, data analysis training, and technical support</h3>
+            <p>
+              Through Globewrite Solutions, I have supported students, researchers, and professionals with research methods,
+              data analysis, scientific reporting, literature review support, and methodological guidance. This work covers hands-on support in SPSS,
+              Stata, R, and Python, as well as training in data visualization, interpretation, and academic writing.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Training</span><span class="tag">Mentorship</span><span class="tag">Research Support</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Applied livestock research</span>
+            <h3>Livestock research, field data collection, and analytical summaries</h3>
+            <p>
+              Conducted livestock research on indigenous animal populations, combining field data collection, laboratory-linked work,
+              dataset analysis, reporting, visual outputs, and community-facing documentation. This included work on genetics, diversity,
+              welfare, health, production, and management practices across livestock systems.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Research Analysis</span><span class="tag">Field Data</span><span class="tag">Livestock Systems</span><span class="tag">Reporting</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Applied research outputs</span>
+            <h3>Animal genetics and breeding research analysis</h3>
+            <p>
+              Worked on genetic and breeding-related research outputs including indigenous chicken diversity analysis,
+              African pig adaptive evolution work, and other breeding and genetics questions tied to local animal resources.
+              This area reflects my strength in connecting biological questions with data analysis, interpretation, and technical writing.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Animal Genetics</span><span class="tag">R</span><span class="tag">Research</span><span class="tag">Scientific Writing</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Service and operations analysis</span>
+            <h3>Animal health records, case documentation, and service tracking</h3>
+            <p>
+              Supported animal health service delivery and data management through case documentation, treatment monitoring,
+              disease tracking, follow-up support, and the use of digital tools for case records and reporting. This work strengthened my practical experience in structured data capture and service-oriented analysis.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Data Management</span><span class="tag">Animal Health</span><span class="tag">Monitoring</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Programme and performance reporting</span>
+            <h3>Farm and livestock performance monitoring</h3>
+            <p>
+              Managed and monitored livestock production activities while improving farm-level data collection and reporting systems.
+              This included tracking reproduction, feeding, housing, health, husbandry practices, risk areas, and operational performance,
+              then preparing data-driven recommendations for better management decisions.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Excel</span><span class="tag">Performance Monitoring</span><span class="tag">Livestock Systems</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Public and community work</span>
+            <h3>Community data, workshops, and monitoring support</h3>
+            <p>
+              Supported community-facing projects through workshop organization, stakeholder engagement, data collection,
+              tracking of outcomes, and basic monitoring frameworks. This experience strengthened my understanding of programme support,
+              community data, public-health-related work, and evidence use outside purely academic settings.
+            </p>
+            <div class="tag-row">
+              <span class="tag">M&amp;E Support</span><span class="tag">Workshops</span><span class="tag">Community Data</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="card section-card">
+        <h2 class="section-title">Selected experience</h2>
+        <div class="timeline">
+          <div class="role">
+            <h3>Animal Production Specialist</h3>
+            <div class="role-meta">NSAP, Animal Production and Health Division, FAO, Rome • 2025 to present</div>
+            <p>Review and analysis of national reports, data validation, technical summaries, figures and tables, and evidence generation for animal genetic resources and livestock systems reporting.</p>
+          </div>
+          <div class="role">
+            <h3>Animal Genetic Resources Intern</h3>
+            <div class="role-meta">NSAP, Animal Production and Health Division, FAO, Rome • 2025</div>
+            <p>Questionnaire review, chapter support, breed population data work, figures and tables, maps, and analytical support for the Third Report on the State of the World’s Animal Genetic Resources.</p>
+          </div>
+          <div class="role">
+            <h3>Research, Training and Capacity Development Lead</h3>
+            <div class="role-meta">Globewrites Solutions, Rwanda • 2024 to 2025</div>
+            <p>Research mentoring, data analysis support, methodology guidance, report and manuscript support, and technical training in data tools and research methods.</p>
+          </div>
+          <div class="role">
+            <h3>Animal Research and Data Analysis Specialist</h3>
+            <div class="role-meta">University of Rwanda / ALX Africa • 2023 to 2024</div>
+            <p>Livestock research, field and laboratory support, dataset analysis, visual outputs, GIS maps, and multidisciplinary project work linked to animal systems and data-driven initiatives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="grid-2">
+        <div class="card section-card">
+          <h2 class="section-title">Skills</h2>
+          <div class="two-col-list">
+            <div class="skill-box"><strong>Programming</strong><br/><span class="small">R, Python, SQL</span></div>
+            <div class="skill-box"><strong>Analytics tools</strong><br/><span class="small">Excel, SPSS, Tableau, Power BI, Stata, SAS</span></div>
+            <div class="skill-box"><strong>Research</strong><br/><span class="small">Research design, methodology, qualitative and quantitative analysis, survey tools, interpretation</span></div>
+            <div class="skill-box"><strong>Reporting</strong><br/><span class="small">Technical writing, findings presentation, summaries, knowledge products, scientific reporting</span></div>
+            <div class="skill-box"><strong>Spatial work</strong><br/><span class="small">QGIS, GIS mapping, geospatial database analysis</span></div>
+            <div class="skill-box"><strong>Programme support</strong><br/><span class="small">M&amp;E support, facilitation, stakeholder engagement, capacity building, training delivery</span></div>
+          </div>
+        </div>
+
+        <div class="card section-card">
+          <h2 class="section-title">Animal systems strengths</h2>
+          <ul class="bullets">
+            <li>Animal genetics and breeding</li>
+            <li>Animal production and livestock systems</li>
+            <li>Animal health and welfare support</li>
+            <li>Bioinformatics and laboratory support</li>
+            <li>Biosafety and biosecurity support</li>
+            <li>Technical and policy-facing livestock reporting</li>
+          </ul>
+          <div class="divider"></div>
+          <h2 class="section-title" style="font-size:1.4rem">Education &amp; certifications</h2>
+          <ul class="bullets">
+            <li>MSc Data-Driven Breeding and Genetics, University of Edinburgh, 2026</li>
+            <li>MSc Animal Production: Breeding and Genetics, University of Rwanda, 2024</li>
+            <li>B.Agric. Animal Science, Landmark University, 2018</li>
+            <li>IBM Data Science Professional Certificate</li>
+            <li>IBM Generative AI Engineering</li>
+            <li>Data Analytics, ALX Tech / Explore AI</li>
+            <li>Google Project Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card section-card">
+        <h2 class="section-title">Why this portfolio is broader</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <h3>Built from actual work</h3>
+            <p>It reflects your international reporting work, data analysis background, research support, training role, livestock systems experience, and public-facing mentorship profile.</p>
+          </div>
+          <div class="project">
+            <h3>Broad enough for multiple paths</h3>
+            <p>It works for general analyst jobs, research roles, development-sector roles, training and support roles, and technical agriculture or livestock positions.</p>
+          </div>
+          <div class="project">
+            <h3>Ready for later expansion</h3>
+            <p>You can still split some of these sections into separate GitHub repositories later, but the main site now already reads like a finished professional portfolio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card section-card">
+        <h2 class="section-title">Contact</h2>
+        <p class="small">
+          <strong>Email:</strong> <a href="mailto:ajayiphilip70@gmail.com">ajayiphilip70@gmail.com</a><br/>
+          <strong>GitHub:</strong> <a href="https://github.com/SantosPhilz" target="_blank" rel="noopener">github.com/SantosPhilz</a><br/>
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/philip-b-d-ajayi" target="_blank" rel="noopener">philip-b-d-ajayi</a><br/>
+          <strong>Website:</strong> <a href="https://santosphilz.github.io/" target="_blank" rel="noopener">santosphilz.github.io</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Built for GitHub Pages • Professional portfolio for data, research, and animal systems work
+    </div>
+  </footer>
+</body>
+</html>
