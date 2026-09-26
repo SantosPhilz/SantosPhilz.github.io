@@ -1,11 +1,12 @@
 # Philip Ajayi — Portfolio
 
-This repository contains the source for [Philip Ajayi's portfolio](https://santosphilz.github.io/), a static GitHub Pages site focused on data analysis, research, technical reporting, and animal systems.
+This repository contains the source for [Philip Ajayi's portfolio](https://santosphilz.github.io/), a static GitHub Pages site covering data analysis, data science, market research, education research, monitoring and evaluation, technical reporting, and animal systems.
 
 ## What is here
 
 - `index.html` contains the page content and its CSS. There is no build step or JavaScript dependency.
 - The compact introduction puts **Featured projects** immediately below the hero.
+- The **Experience** section covers research, market analysis, education, monitoring and evaluation, and animal systems roles, including cross-disciplinary mentoring and teaching at Globewrites Solutions.
 - The project section links to nine repositories, with direct links to source code, SQL queries, methods, sample output, or final reports. The first three projects use entirely synthetic data.
 
 ## Preview locally
