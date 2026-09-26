@@ -1,6 +1,6 @@
 # Philip Ajayi — Portfolio
 
-This repository contains the source for [Philip Ajayi's portfolio](https://santosphilz.github.io/), a static GitHub Pages site covering data analysis, data science, market research, education research, monitoring and evaluation, technical reporting, and animal systems.
+This repository contains the source for [Philip Ajayi's portfolio](https://santosphilz.github.io/), a static GitHub Pages site covering general and cross-disciplinary research, data analysis, data science, applied machine learning, market and education research, monitoring and evaluation, technical reporting, and animal systems.
 
 ## What is here
 
@@ -44,4 +44,4 @@ Then open `http://localhost:8000/`.
 
 - [GitHub](https://github.com/SantosPhilz)
 - [LinkedIn](https://www.linkedin.com/in/philip-b-d-ajayi)
-- [Email](mailto:ajayiphilip70@gmail.com)
+- [Email](mailto:pbdajayi@gmail.com)
