@@ -43,45 +43,40 @@
     .brand{font-size:1.08rem;font-weight:700}
     .nav-links{display:flex;gap:16px;flex-wrap:wrap}
     .nav-links a{font-size:.94rem}
-    .hero{
-      display:grid;grid-template-columns:1.18fr .82fr;gap:22px;
-      padding:54px 0 28px;align-items:stretch;
-    }
+    .hero{padding:28px 0 8px}
     .card{
       background:linear-gradient(180deg, rgba(18,32,61,.93), rgba(13,25,47,.93));
       border:1px solid var(--line);
       border-radius:22px;
       box-shadow:var(--shadow);
     }
-    .hero-main{padding:36px}
-    .hero-side{padding:28px}
+    .hero-main{padding:24px 28px}
     .eyebrow{
-      font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent2);margin-bottom:14px;
+      font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent2);margin-bottom:8px;
     }
     h1{
-      margin:0 0 16px;
-      font-size:clamp(2.1rem,4vw,4rem);
+      margin:0 0 10px;
+      font-size:clamp(1.9rem,3vw,2.9rem);
       line-height:1.08;
     }
     .lead{
       color:var(--muted);
-      font-size:1.04rem;
-      margin:0 0 14px;
+      font-size:1rem;
+      max-width:75ch;
+      margin:0 0 10px;
     }
-    .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+    .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
     .chip{
       background:var(--chip);
       border:1px solid var(--line);
       padding:8px 12px;border-radius:999px;font-size:.9rem;color:var(--accent2);
     }
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
     .btn{
       display:inline-block;padding:12px 16px;border-radius:12px;
       border:1px solid var(--line);background:var(--soft);color:var(--text);font-weight:700;
     }
     .btn.primary{background:var(--accent);color:#08101d;border-color:transparent}
-    .stat{padding:14px 0;border-bottom:1px solid var(--line);}
-    .stat:last-child{border-bottom:none}
     section{padding:16px 0}
     .section-card{padding:28px}
     .section-title{font-size:1.9rem;margin:0 0 14px}
@@ -101,6 +96,8 @@
       padding:20px;border-radius:18px;border:1px solid var(--line);
       background:rgba(10,18,34,.88);
     }
+    .project-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-weight:700}
+    .project-links a:focus-visible,.btn:focus-visible,.nav-links a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
     .project-type{
       display:inline-block;margin-bottom:10px;font-size:.78rem;
       letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);
@@ -125,8 +122,9 @@
     .bullets{margin:10px 0 0;padding-left:18px;color:var(--muted)}
     .footer{padding:40px 0 58px;text-align:center;color:var(--muted)}
     .divider{height:1px;background:var(--line);margin:10px 0 18px}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
     @media (max-width: 950px){
-      .hero,.grid-2,.grid-3,.two-col-list{grid-template-columns:1fr}
+      .grid-2,.grid-3,.two-col-list{grid-template-columns:1fr}
       nav{flex-direction:column;align-items:flex-start}
     }
   </style>
@@ -137,9 +135,9 @@
       <nav>
         <div class="brand">Philip Ajayi</div>
         <div class="nav-links">
+          <a href="#portfolio">Projects</a>
           <a href="#about">About</a>
           <a href="#domains">Domains</a>
-          <a href="#portfolio">Portfolio</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -152,44 +150,156 @@
     <section class="hero">
       <div class="card hero-main">
         <div class="eyebrow">Data Science • Analytics • Research • Technical Reporting • Animal Systems</div>
-       <h1>Turning complex data into clear research, reports, and decision-ready insights</h1>
+        <h1>Philip Ajayi — data analysis, research, and animal systems</h1>
         <p class="lead">
-  I am Philip Ajayi, an internationally experienced data and research professional working across data analysis,
-  research support, technical reporting, evidence generation, and domain-focused work in multidisciplinary areas,
-  including animal science, livestock systems, and genetics.
-</p>
-        <p class="lead">
-          My profile combines analytical delivery, research support, public-interest reporting, training, and domain expertise.
-          I work across general analyst functions and technical sector work, with experience in international reporting,
-          data validation, GIS outputs, research mentoring, and livestock systems analysis.
+          I turn complex information into clear analysis and technical reporting, with a focus on animal and livestock systems.
+          Explore public code, methods, and reports below.
         </p>
         <div class="chip-row">
           <span class="chip">R</span>
           <span class="chip">Python</span>
           <span class="chip">SQL</span>
-          <span class="chip">Excel</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">Tableau</span>
-          <span class="chip">SPSS</span>
-          <span class="chip">QGIS</span>
-          <span class="chip">Research Design</span>
-          <span class="chip">Data Storytelling</span>
           <span class="chip">Technical Writing</span>
           <span class="chip">Animal Genetics</span>
         </div>
         <div class="cta-row">
-          <a class="btn primary" href="#portfolio">View Portfolio</a>
+          <a class="btn primary" href="#portfolio">View Projects</a>
           <a class="btn" href="https://github.com/SantosPhilz" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/philip-b-d-ajayi" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="mailto:ajayiphilip70@gmail.com">Email</a>
         </div>
       </div>
 
-      <div class="card hero-side">
-        <div class="stat"><strong>Current positioning</strong><br/>Data analyst, research analyst, technical reporting specialist, and domain expert in animal and livestock systems.</div>
-        <div class="stat"><strong>Best-fit roles</strong><br/>Data Analyst, Research Analyst, BI Analyst, M&amp;E Analyst, Technical Analyst, Livestock Data Specialist, Knowledge and Reporting Associate.</div>
-        <div class="stat"><strong>Core advantage</strong><br/>Turning messy information into structured outputs, clear visuals, technical summaries, and decision-ready insight.</div>
-        <div class="stat"><strong>Professional range</strong><br/>Broad enough for general analyst and research roles, while still strong in agriculture, livestock, genetics, and research-heavy work.</div>
+    </section>
+
+    <section id="portfolio" aria-labelledby="portfolio-title">
+      <div class="card section-card">
+        <h2 class="section-title" id="portfolio-title">Featured projects</h2>
+        <p class="small">Public code and reports. The first three projects use entirely synthetic data to demonstrate general analytics methods.</p>
+        <div class="projects-grid">
+          <article class="project">
+            <span class="project-type">Synthetic demonstration · Python</span>
+            <h3>Data quality validator</h3>
+            <p>A standard-library tool that checks CSV data against a JSON contract, including field types, value rules, duplicate identifiers, and row counts. It produces readable or machine-readable findings for data pipelines.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Data validation</span><span class="tag">CSV</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/data-quality-validator" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/data-quality-validator/blob/main/data_quality_validator/validation.py" target="_blank" rel="noopener noreferrer">Source code</a>
+              <a href="https://github.com/SantosPhilz/data-quality-validator/blob/main/examples/schema.json" target="_blank" rel="noopener noreferrer">Example contract</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Synthetic demonstration · Python</span>
+            <h3>Multi-method estimation engine</h3>
+            <p>A transparent calculation example that combines estimates with configurable weights, handles missing methods, and reports sensitivity scenarios and simulated input uncertainty. Its sample countries and values are fictional.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Estimation</span><span class="tag">Sensitivity analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/multi-method-estimation" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/multi-method-estimation/blob/main/multi_method_estimation/core.py" target="_blank" rel="noopener noreferrer">Source code</a>
+              <a href="https://github.com/SantosPhilz/multi-method-estimation/blob/main/examples/sample_report.json" target="_blank" rel="noopener noreferrer">Sample report</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Synthetic demonstration · SQL</span>
+            <h3>SQL business analytics case study</h3>
+            <p>A reproducible SQLite case study using fabricated subscription-business data. Five queries examine monthly revenue, customer value, product contribution, regional rankings, and cohort retention.</p>
+            <div class="tag-row">
+              <span class="tag">SQLite</span><span class="tag">Window functions</span><span class="tag">Cohort analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/sql-business-analytics" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/sql-business-analytics/tree/main/sql/queries" target="_blank" rel="noopener noreferrer">View SQL queries</a>
+              <a href="https://github.com/SantosPhilz/sql-business-analytics/blob/main/scripts/build_db.py" target="_blank" rel="noopener noreferrer">Data generator</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">International reporting · R</span>
+            <h3>Animal genetic resources reporting workflow</h3>
+            <p>Public-safe R scripts for preparing tables, figures, regional summaries, and map-ready outputs for animal genetic resources reporting. Restricted source data is excluded.</p>
+            <div class="tag-row">
+              <span class="tag">R</span><span class="tag">Data preparation</span><span class="tag">Technical reporting</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/fao-sow-analytics-workflow" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/fao-sow-analytics-workflow/tree/main/fao_sow_analytics_workflow/scripts" target="_blank" rel="noopener noreferrer">View scripts</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Python · Monitoring prototype</span>
+            <h3>Spanish retailer egg listing monitor</h3>
+            <p>A Python prototype for collecting public egg listings and classifying production systems. The sample output covers five retailers; some sources need session handling or manual validation before repeatable monitoring.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Web data</span><span class="tag">Classification</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/spanish-retailer-egg-scraping-monitor" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/spanish-retailer-egg-scraping-monitor/blob/main/docs/methodology.md" target="_blank" rel="noopener noreferrer">Methodology</a>
+              <a href="https://github.com/SantosPhilz/spanish-retailer-egg-scraping-monitor/blob/main/data/sample_egg_listing_classification.csv" target="_blank" rel="noopener noreferrer">Sample data</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Statistical genetics · Report</span>
+            <h3>Genomics and phenomics in breeding</h3>
+            <p>A report-based analysis of genotype and phenotype data, including quality control, population structure, genomic relationship methods, breeding values, and genome-wide association workflows.</p>
+            <div class="tag-row">
+              <span class="tag">R</span><span class="tag">PCA</span><span class="tag">GBLUP</span><span class="tag">GWAS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/genomics-phenomics-breeding-analysis" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/genomics-phenomics-breeding-analysis/blob/main/reports/final_report.pdf" target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">R · Analysis and reporting</span>
+            <h3>Biogas yield analysis</h3>
+            <p>A short R Markdown analysis of biogas yield data, with type checks, grouped summaries, visualisations, and interpretation of differences across input and pretreatment categories.</p>
+            <div class="tag-row">
+              <span class="tag">R Markdown</span><span class="tag">Descriptive statistics</span><span class="tag">Visualisation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/short-biogas-data-analysis-report" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/short-biogas-data-analysis-report/blob/main/scripts/analysis_report.Rmd" target="_blank" rel="noopener noreferrer">Analysis source</a>
+              <a href="https://github.com/SantosPhilz/short-biogas-data-analysis-report/blob/main/reports/final_report.pdf" target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Quantitative genetics · R</span>
+            <h3>Principles of genetic evaluation</h3>
+            <p>An R Markdown analysis of pedigree relationships, inbreeding, variance components, breeding values, and animal-model interpretation, with a finished report.</p>
+            <div class="tag-row">
+              <span class="tag">R Markdown</span><span class="tag">Pedigree analysis</span><span class="tag">Animal models</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/principles-genetic-evaluation-analysis" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/principles-genetic-evaluation-analysis/blob/main/scripts/analysis_report.Rmd" target="_blank" rel="noopener noreferrer">Analysis source</a>
+              <a href="https://github.com/SantosPhilz/principles-genetic-evaluation-analysis/blob/main/reports/final_report.pdf" target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project-type">Simulation · Report</span>
+            <h3>Dairy cattle breeding programme simulation</h3>
+            <p>A report on an AlphaSimR breeding programme simulation covering founder populations, trait assumptions, phenotypic selection, and genetic gain across generations.</p>
+            <div class="tag-row">
+              <span class="tag">Simulation</span><span class="tag">AlphaSimR</span><span class="tag">Quantitative genetics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SantosPhilz/breeding-programme-simulation-dairy-cattle" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/SantosPhilz/breeding-programme-simulation-dairy-cattle/blob/main/reports/final_report.pdf" target="_blank" rel="noopener noreferrer">Final report (PDF)</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -247,162 +357,6 @@
             <h3>Use cases</h3>
             <p>Food systems, livestock development, technical institutions, agrifood reporting, genetics work, and global livestock information systems.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio">
-      <div class="card section-card">
-        <h2 class="section-title">Portfolio projects and case studies</h2>
-        <p class="small">Select portfolio-ready case studies</p>
-        <div class="projects-grid">
-          <article class="project">
-  <span class="project-type">International reporting</span>
-  <h3>Global questionnaire analysis and reporting workflow</h3>
-  <p>
-    Reviewed and analyzed questionnaire responses submitted by countries, regional focal points, and international organizations
-    to support the Third Report on the State of the World’s Animal Genetic Resources. The work involved cleaning response categories,
-    comparing patterns across regions and time, preparing technical summaries, and helping turn raw country submissions into usable reporting outputs.
-  </p>
-  <div class="tag-row">
-    <span class="tag">R</span><span class="tag">Excel</span><span class="tag">Comparative Analysis</span><span class="tag">Reporting</span>
-  </div>
-  <p><a href="https://github.com/SantosPhilz/fao-sow-analytics-workflow" target="_blank" rel="noopener">View GitHub Repository</a></p>
-</article>
-
-<article class="project">
-  <span class="project-type">General data analysis</span>
-  <h3>Short biogas data analysis report</h3>
-  <p>
-    Completed a short R-based data analysis report on biogas yield, including data import, data type checks,
-    grouped means, visualization, and interpretation of yield differences across input and pretreatment categories.
-    This project shows clean handling of a small dataset and clear communication of basic statistical findings.
-  </p>
-  <div class="tag-row">
-    <span class="tag">R</span><span class="tag">Data Analysis</span><span class="tag">Visualization</span><span class="tag">Descriptive Statistics</span>
-  </div>
-  <p><a href="https://github.com/SantosPhilz/short-biogas-data-analysis-report" target="_blank" rel="noopener">View GitHub Repository</a></p>
-</article>
-
-<article class="project">
-  <span class="project-type">Python scraping and classification</span>
-  <h3>Spanish retailer egg scraping and cage-free classification monitor</h3>
-  <p>
-    Built a client-facing Python workflow to monitor online egg listings across five Spanish retailers.
-    The project used Playwright, BeautifulSoup, JSON/JSON-LD parsing, and rule-based text classification
-    to identify cage-free, caged, and unknown shell-egg listings from public product pages.
-  </p>
-  <div class="tag-row">
-    <span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">Data Cleaning</span><span class="tag">Classification</span>
-  </div>
-  <p><a href="https://github.com/SantosPhilz/spanish-retailer-egg-scraping-monitor" target="_blank" rel="noopener">View GitHub Repository</a></p>
-</article>
-          <article class="project">
-            <span class="project-type">Data quality and systems</span>
-            <h3>Breed data harmonization and validation support</h3>
-            <p>
-              Supported the compilation, validation, integration, and management of breed and livestock-related data from reporting systems,
-              including work linked to DAD-IS and other livestock information sources. This involved checking consistency, improving data quality,
-              supporting evidence-based reporting, and making records more useful for analysis and policy-facing outputs.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">R</span><span class="tag">Data Quality</span><span class="tag">Validation</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Spatial analysis</span>
-            <h3>Maps and spatial outputs for technical reporting</h3>
-            <p>
-              Produced maps and spatial visualizations using QGIS to support analysis and presentation of livestock systems information.
-              These outputs helped make technical findings easier to interpret and communicate, especially in reporting contexts where regional and country-level patterns mattered.
-            </p>
-            <div class="tag-row">
-              <span class="tag">QGIS</span><span class="tag">GIS</span><span class="tag">Spatial Analysis</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Research and training</span>
-            <h3>Research mentoring, data analysis training, and technical support</h3>
-            <p>
-              Through Globewrite Solutions, I have supported students, researchers, and professionals with research methods,
-              data analysis, scientific reporting, literature review support, and methodological guidance. This work covers hands-on support in SPSS,
-              Stata, R, and Python, as well as training in data visualization, interpretation, and academic writing.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Training</span><span class="tag">Mentorship</span><span class="tag">Research Support</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Applied livestock research</span>
-            <h3>Livestock research, field data collection, and analytical summaries</h3>
-            <p>
-              Conducted livestock research on indigenous animal populations, combining field data collection, laboratory-linked work,
-              datasaet analysis, reporting, visual outputs, and community-facing documentation. This included work on genetics, diversity,
-              welfare, health, production, and management practices across livestock systems.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Research Analysis</span><span class="tag">Field Data</span><span class="tag">Livestock Systems</span><span class="tag">Reporting</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Applied research outputs</span>
-            <h3>Animal genetics and breeding research analysis</h3>
-            <p>
-              Worked on genetic and breeding-related research outputs including indigenous chicken diversity analysis,
-              African pig adaptive evolution work, and other breeding and genetics questions tied to local animal resources.
-              This area reflects my strength in connecting biological questions with data analysis, interpretation, and technical writing.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Animal Genetics</span><span class="tag">R</span><span class="tag">Research</span><span class="tag">Scientific Writing</span>
-            </div>
-            <p>
-  <a href="https://github.com/SantosPhilz/genomics-phenomics-breeding-analysis" target="_blank" rel="noopener">View Genomics & Phenomics Project</a><br>
-  <a href="https://github.com/SantosPhilz/principles-genetic-evaluation-analysis" target="_blank" rel="noopener">View Genetic Evaluation Project</a><br>
-  <a href="https://github.com/SantosPhilz/breeding-programme-simulation-dairy-cattle" target="_blank" rel="noopener">View Breeding Simulation Project</a>
-</p>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Service and operations analysis</span>
-            <h3>Animal health records, case documentation, and service tracking</h3>
-            <p>
-              Supported animal health service delivery and data management through case documentation, treatment monitoring,
-              disease tracking, follow-up support, and the use of digital tools for case records and reporting. This work strengthened my practical experience in structured data capture and service-oriented analysis.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Data Management</span><span class="tag">Animal Health</span><span class="tag">Monitoring</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Programme and performance reporting</span>
-            <h3>Farm and livestock performance monitoring</h3>
-            <p>
-              Managed and monitored livestock production activities while improving farm-level data collection and reporting systems.
-              This included tracking reproduction, feeding, housing, health, husbandry practices, risk areas, and operational performance,
-              then preparing data-driven recommendations for better management decisions.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Excel</span><span class="tag">Performance Monitoring</span><span class="tag">Livestock Systems</span>
-            </div>
-          </article>
-
-          <article class="project">
-            <span class="project-type">Public and community work</span>
-            <h3>Community data, workshops, and monitoring support</h3>
-            <p>
-              Supported community-facing projects through workshop organization, stakeholder engagement, data collection,
-              tracking of outcomes, and basic monitoring frameworks. This experience strengthened my understanding of programme support,
-              community data, public-health-related work, and evidence use outside purely academic settings.
-            </p>
-            <div class="tag-row">
-              <span class="tag">M&amp;E Support</span><span class="tag">Workshops</span><span class="tag">Community Data</span>
-            </div>
-          </article>
         </div>
       </div>
     </section>
